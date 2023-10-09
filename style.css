@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 24px;
+  font-family: 'Space Mono', monospace;
+}
+
+:root {
+  --primary-color: hsl(172, 67%, 45%);
+
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+
+.container {
+    background-color: var(--Light-grayish-cyan);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1{
+    text-transform: uppercase;
+    color: var(--Very-dark-cyan);
+    letter-spacing: 5px;
+    margin-bottom: 1rem;
+}
+
+.main-section{
+    background-color: var(--White);
+    width: 70%;
+    border-radius: 20px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+/* Left Section */
+
+.left-section{
+    width: 50%;
+}
+
+.bill,.tip, .people{
+    margin-bottom: 1.5rem;
+    color: var(--Grayish-cyan);
+}
+
+.sub-heading{
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.bill-inp, .people-inp{
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    background-color: var(--Very-light-grayish-cyan);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 10px;
+}
+
+.bill-inp img, .people img{
+    padding: 5px;
+    width: 25px;
+}
+
+#bill, #people{
+    width: 100%;
+    outline: none;
+    background-color: var(--Very-light-grayish-cyan);
+    border: none;
+    border-radius: 5px;
+    text-align: right;
+    padding-inline: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--Very-dark-cyan);
+    caret-color: var(--Very-dark-cyan);
+}
+
+#bill::placeholder, #people::placeholder{
+    color: var(--Grayish-cyan);
+}
+
+.tip-btns{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.tip-btn{
+    background-color: var(--Very-dark-cyan);
+    color: var(--White);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding-block: 5px;
+}
+
+.tip-btn:focus{
+    background-color: var(--primary-color);
+    color: var(--Very-dark-cyan);
+    font-weight: 700;
+}
+
+#custom{
+    width: 100%;
+    border: transparent;
+    font-weight: 700;
+    color: var(--Very-dark-cyan);
+    background-color: var(--Very-light-grayish-cyan);
+    text-align: end;
+    cursor: pointer;
+}
+
+#custom::placeholder{
+    text-align: center;
+}
+
+#custom:focus{
+    border: 2px solid var(--primary-color);
+}
+
+/* Right Section */
+.right-section{
+    background-color: var(--Very-dark-cyan);
+    width: 50%;
+    height: 100%;
+    padding-inline: 1.8rem;
+    padding-block: 1rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tip-amnt, .total-amnt{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.main-head{
+    color: var(--White);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.sub-head{
+    color: var(--Grayish-cyan);
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.price, #total-price, #total-tip{
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+#reset-btn{
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--Very-dark-cyan);
+    border: none;
+    border-radius: 5px;
+    padding-block: 5px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Removing input arrows */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
